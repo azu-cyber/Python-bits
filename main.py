@@ -23,3 +23,14 @@ if isEvenOdd (number):
     print(number," is Even")
 else:
     print(number," is Odd")
+
+# Functions taking our number as input
+def numberOfBits(n):
+    count = 0
+    # Right shift the number till it becomes e
+    while (n):
+        count += 1
+    n >>= 1
+    return count
+number = int(input("Enter your number : "))
+print("Total bits : ",numberOfBits(number))
