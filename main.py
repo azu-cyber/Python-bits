@@ -1,36 +1,12 @@
-num1=10
-num2=4
-print("num1 & num2=", num1 & num2)
-print("\nnum1 | num2=", num1 | num2)
-print("\n~num1 =", ~num1)
-print ("\nnum1 ^ num2 = ", num1 ^ num2)
-num1=10
-num2=4
-print("\nnum1 >> 1 =", num1>>1)
-print("\nnum2 >> 1=", num2>>1)
-num1=10      
-num2=4
-print("\nnum1 < 1=", num1<<1)
-print("\nnum < 1=", num2<<1)
-
-def isEvenOdd( n) :
-    if (n ^ 1 ==n + 1) :
-        return True;
-    else :
-        return False;
-number = int(input("Enter your number : "))
-if isEvenOdd (number):
-    print(number," is Even")
-else:
-    print(number," is Odd")
-
-# Functions taking our number as input
-def numberOfBits(n):
-    count = 0
-    # Right shift the number till it becomes e
-    while (n):
-        count += 1
-    n >>= 1
-    return count
-number = int(input("Enter your number : "))
-print("Total bits : ",numberOfBits(number))
+def OddOccurring(arr):
+    res = 0
+    for element in arr:
+        res = res ^ element
+    return res
+arr = []
+n = int(input("Enter array size : "))
+while(n):
+    num = int(input("Enter number : "))
+    arr.append (num)
+    n-=1
+print("\n\nodd occurring number is : ",OddOccurring(arr))
